@@ -2,6 +2,7 @@ import { NextPage } from "next";
 import { useEffect, useState } from "react";
 import { useSetPeraWalletInstance } from "./useSetPeraWalletInstance";
 import {PeraWalletConnect} from "@perawallet/connect"
+import StatusBtn from "./components/StatusBtn";
 
 const Authentication: NextPage = () => {
     const [errorMessage, setErrorMessage] = useState("")
@@ -43,7 +44,8 @@ const Authentication: NextPage = () => {
     }
 
     return (
-        <div className="w-full h-screen pt-headerHeight -mt-headerHeight">
+        <div className="w-full h-screen pt-headerHeight -mt-headerHeight relative">
+            <StatusBtn />
             <div className="w-full h-full grid grid-cols-1 grid-rows-2 relative top-headerHeight left-0">
                 <div id="d1" className=""></div>
                 <div id="d2" className="bg-lightGreen border-t border-darkGreen "></div>
